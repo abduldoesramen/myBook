@@ -1,0 +1,445 @@
+body {
+  background-color: white;
+}
+
+#titleOfPage {
+  color: blue;
+  text-shadow: -1px -1px 0 lightblue, 1px -1px 0 lightblue, -1px 1px 0 lightblue,
+    1px 1px 0 lightblue;
+  font-size: 64px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#welcomeText {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  /* aligning horizontally to middle */
+  text-align: center;
+}
+
+#boxLogin {
+  width: 640px;
+  padding: 16px 32px;
+  border: 2px solid lightgray;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+#boxLogin:hover {
+  border: 2px solid darkgray;
+}
+
+#email {
+  width: 210px;
+  box-sizing: border-box;
+  border: 2px solid lightgray;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 16px 32px;
+  transition: width 0.4s ease-in-out;
+  /* Centering vertically and horizontally with FlexBox */
+  display: flex;
+  justify-content: center;
+}
+
+#email:focus {
+  width: 100%;
+}
+
+#password {
+  width: 150px;
+  box-sizing: border-box;
+  border: 2px solid lightgray;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 16px 32px;
+  transition: width 0.4s ease-in-out;
+  /* Centering vertically and horizontally with FlexBox */
+  display: flex;
+  justify-content: center;
+}
+
+#password:focus {
+  width: 100%;
+}
+
+input[type="submit"] {
+  background-color: lightgray;
+  font-size: 16px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  border: none;
+  border-radius: 15px;
+  color: blue;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  transition-duration: 0.5s;
+}
+
+/* When clicked, changes colour */
+input[type="submit"]:hover {
+  background-color: darkgray;
+}
+
+input[type="submit"]:focus {
+  background-color: darkgray;
+}
+
+/* Imported from: https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  padding-bottom: 5px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: gray;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid lightgray;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#register {
+  background-color: lightgray;
+  font-size: 16px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  border: none;
+  border-radius: 15px;
+  color: blue;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  transition-duration: 0.5s;
+}
+
+/* When clicked, changes colour */
+#register:hover {
+  background-color: darkgray;
+}
+
+#register:focus {
+  background-color: darkgray;
+}
+
+#password {
+  font-size: 16px;
+}
+
+/* 
+-----------------------------------------------|
+                                               |
+Register page:                                 |
+                                               |
+-----------------------------------------------|
+*/
+
+.titleOfRegister {
+  color: blue;
+  text-shadow: -1px -1px 0 lightblue, 1px -1px 0 lightblue, -1px 1px 0 lightblue,
+    1px 1px 0 lightblue;
+  font-size: 64px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin-bottom: 15px;
+  /* aligning horizontally to middle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Outer box */
+#boxRegister {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+#generalInstructions {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  /* aligning horizontally to middle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#detailInstructions {
+  margin-bottom: 5px;
+}
+
+#passwordInstructions {
+  margin-bottom: 5px;
+}
+
+#boxRegister {
+  width: 640px;
+  padding: 16px 32px;
+  border: 2px solid lightgray;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+#boxRegister #boxDetail {
+  width: 50%;
+  padding: 16px 32px;
+  border: 2px solid lightgray;
+  border-radius: 15px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+#boxRegister #boxDetail:hover {
+  border: 2px solid darkgray;
+}
+
+#firstName {
+  width: 210px;
+  box-sizing: border-box;
+  border: 2px solid lightgray;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 16px 32px;
+  transition: width 0.4s ease-in-out;
+  /* Centering vertically and horizontally with FlexBox */
+  display: flex;
+  justify-content: center;
+}
+
+#firstName:focus {
+  width: 100%;
+}
+
+#lastName {
+  width: 210px;
+  box-sizing: border-box;
+  border: 2px solid lightgray;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 16px 32px;
+  transition: width 0.4s ease-in-out;
+  /* Centering vertically and horizontally with FlexBox */
+  display: flex;
+  justify-content: center;
+}
+
+#lastName:focus {
+  width: 100%;
+}
+
+#handle {
+  width: 210px;
+  box-sizing: border-box;
+  border: 2px solid lightgray;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 16px 32px;
+  transition: width 0.4s ease-in-out;
+  /* Centering vertically and horizontally with FlexBox */
+  display: flex;
+  justify-content: center;
+}
+
+#handle:focus {
+  width: 100%;
+}
+
+#boxRegister #boxPassword {
+  width: 50%;
+  padding: 16px 32px;
+  border: 2px solid lightgray;
+  border-radius: 15px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+#boxRegister #boxPassword:hover {
+  border: 2px solid darkgray;
+}
+
+#boxRegister #boxDetail:hover {
+  border: 2px solid darkgray;
+}
+
+#password {
+  width: 210px;
+  box-sizing: border-box;
+  border: 2px solid lightgray;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 16px 32px;
+  transition: width 0.4s ease-in-out;
+  /* Centering vertically and horizontally with FlexBox */
+  display: flex;
+  justify-content: center;
+}
+
+#password:focus {
+  width: 100%;
+}
+
+#repeatPassword {
+  width: 210px;
+  box-sizing: border-box;
+  border: 2px solid lightgray;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 16px 32px;
+  transition: width 0.4s ease-in-out;
+  /* Centering vertically and horizontally with FlexBox */
+  display: flex;
+  justify-content: center;
+}
+
+#repeatPassword:focus {
+  width: 100%;
+}
+
+#regions {
+  width: 210px;
+  height: 40px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: gray;
+  border: 2px solid lightgray;
+  border-radius: 4px;
+  transition: width 0.4s ease-in-out;
+}
+
+#regions:focus {
+  font-size: 16px;
+  width: 100%;
+}
+
+#regions:hover {
+  border-color: darkgray;
+}
+
+#feedback {
+  background-color: lightgray;
+  font-size: 16px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  border: none;
+  border-radius: 15px;
+  color: blue;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  transition-duration: 0.5s;
+}
+
+/* When clicked, changes colour */
+#feedback:hover {
+  background-color: darkgray;
+}
+
+#feedback:focus {
+  background-color: darkgray;
+}
+
+#emailRegister {
+  width: 210px;
+  box-sizing: border-box;
+  border: 2px solid lightgray;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 16px 32px;
+  transition: width 0.4s ease-in-out;
+  /* Centering vertically and horizontally with FlexBox */
+  display: flex;
+  justify-content: center;
+}
+
+#emailRegister:focus {
+  width: 100%;
+}

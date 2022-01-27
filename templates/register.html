@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>MyBook</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="stylesheet" href="/static/main.css" />
+</head>
+<body>
+  <h1 class="titleOfRegister">myBook</h1>
+  <div id="generalInstructions">
+    <p>Please complete the form below to register for myBook:</p>
+  </div>
+  <div id="boxRegister">
+    <div id="detailInstructions">Please enter your details:</div>
+    <div id="boxDetail">
+      <form action="#" method="post">
+        <input
+          style="margin-bottom: 15px"
+          type="text"
+          id="firstName"
+          name="firstName"
+          placeholder="First name"
+        />
+        <input
+          style="margin-bottom: 15px"
+          type="text"
+          id="lastName"
+          name="lastName"
+          placeholder="Last name"
+        />
+        <input
+          style="margin-bottom: 15px"
+          type="text"
+          id="emailRegister"
+          name="emailRegister"
+          placeholder="Email"
+        />
+        <input
+          style="margin-bottom: 15px"
+          type="text"
+          id="handle"
+          name="handle"
+          placeholder="Username"
+        />
+        <select name="regions" id="regions">
+            <option value="" disabled selected hidden>Select your region:</option>
+            <option value="Oceania">Oceania</option>
+            <option value="northAmerica">North America</option>
+            <option value="southAmerica">South America</option>
+            <option value="Europe">Europe</option>
+            <option value="Africa">Africa</option>
+            <option value="Asia">Asia</option>
+        </select>
+      </form>
+    </div>
+    <div id="passwordInstructions">Create a password:</div>
+    <div id="boxPassword">
+        <form action="#" method="post">
+            <input
+              style="margin-bottom: 15px"
+              type="text"
+              id="password"
+              name="password"
+              placeholder="Password"
+            />
+            <input
+            style="margin-bottom: 15px"
+            type="text"
+            id="repeatPassword"
+            name="repeatPassword"
+            placeholder="Re-enter Password"
+          />
+    </div>
+    <input type="submit" name="submit_button" value="Register" />
+    <button type="submit" id="feedback" onClick="myFunction()">Feedback</button>
+  </div>
+  <script>
+    function myFunction() {
+      alert("YOU CLICKED ME!");
+    }
+  </script>
+</body>

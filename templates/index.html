@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+{% block content %}
+
+<head>
+  <meta charset="utf-8" />
+  <title>myBook</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="stylesheet" href="/static/main.css" />
+</head>
+<body>
+  <h1 id="titleOfPage">myBook</h1>
+  <div id="welcomeText"><p>Welcome! Please login below:</p></div>
+  <div id="boxLogin">
+    <form action="#" method="post">
+      <input
+        style="margin-bottom: 15px"
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Email"
+        value="{{email if email}}"
+      />
+      <input
+        style="margin-bottom: 15px"
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Password"
+      />
+      <label class="container"
+        >Show Password
+        <input type="checkbox" onClick="showPassword()" />
+        <span class="checkmark"></span>
+      </label>
+      <input type="submit" name="submit_button" value="Submit" />
+      <!--FIX BUTTON TO REDIRECT TO REGISTER-->
+      <input type="submit" name="submit_button" value="Register" />
+    </form>
+  </div>
+  <script>
+    function showPassword() {
+      var pass = document.getElementById("password");
+      if (pass.type == "password") {
+        pass.type = "text";
+      } else {
+        pass.type = "password";
+      }
+    }
+  </script>
+</body>
+
+{% endblock %}
